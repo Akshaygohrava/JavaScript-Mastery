@@ -91,4 +91,3 @@ document.writeln(counter());
 document.writeln(counter());
 document.writeln(counter());
 document.writeln(counter());
-
