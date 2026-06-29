@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Saree Portfolio · Feature List</title>
+  <!-- Tailwind via CDN + a touch of custom style -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <!-- Font Awesome Icons (free) for polish -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" />
+  <style>
+    /* smooth scroll & table row hover */
+    html { scroll-behavior: smooth; }
+    .feature-table tbody tr {
+      transition: background 0.15s ease, transform 0.1s ease;
+    }
+    .feature-table tbody tr:hover {
+      background: #f8f4ff;
+      box-shadow: inset 0 0 0 1px #d8cff0;
+    }
+    .phase-badge {
+      background: linear-gradient(145deg, #f0eaff, #e3d7f7);
+      border-radius: 9999px;
+      padding: 0.25rem 1rem;
+      font-weight: 600;
+      letter-spacing: 0.3px;
+      color: #4a2d7a;
+    }
+    .card-shadow {
+      box-shadow: 0 10px 25px -8px rgba(0,0,0,0.06), 0 4px 8px -2px rgba(80, 40, 120, 0.05);
+    }
+    .bg-soft-lavender { background: #faf7ff; }
+    .border-soft-lavender { border-color: #e6dcf5; }
+    .text-deep-purple { color: #2d1b4e; }
+    .table-header-bg { background: #f3edfe; }
+    .table-header-text { color: #2b1a47; }
+  </style>
+</head>
+<body class="bg-soft-lavender text-[#1e142f] font-sans antialiased">
+
+  <!-- main container -->
+  <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8 md:py-12">
+
+    <!-- header -->
+    <div class="flex flex-col md:flex-row md:items-end md:justify-between gap-4 mb-6">
+      <div>
+        <span class="inline-flex items-center gap-2 text-sm font-semibold text-[#593c8f] bg-white/70 px-4 py-1.5 rounded-full shadow-sm border border-[#e1d6f0]">
+          <i class="fas fa-list-ul text-[#6b4c9e]"></i> Master Feature List
+        </span>
+        <h1 class="text-3xl md:text-4xl font-extrabold tracking-tight text-deep-purple mt-2 flex items-center gap-3">
+          <i class="fas fa-sari text-[#a17fcb] text-3xl"></i> Saree Portfolio
+        </h1>
+        <p class="text-[#4c3a6b] text-sm md:text-base max-w-2xl mt-1 font-medium opacity-80">
+          Complete feature roadmap · 5 phases + quick‑win add‑ons &amp; security layer
+        </p>
+      </div>
+      <div class="flex items-center gap-3 flex-wrap">
+        <span class="phase-badge text-xs"><i class="far fa-clock mr-1"></i> 41 features</span>
+        <span class="phase-badge text-xs bg-white/70 border border-[#ddd0eb]"><i class="fas fa-check-circle text-[#6f4c9e] mr-1"></i> production ready</span>
+      </div>
+    </div>
+
+    <!-- feature table card -->
+    <div class="bg-white/90 backdrop-blur-sm rounded-3xl border border-soft-lavender card-shadow overflow-hidden transition-all">
+      <div class="overflow-x-auto">
+        <table class="feature-table w-full text-sm md:text-base border-collapse">
+          <!-- table head: clean, sticky -->
+          <thead>
+            <tr class="table-header-bg border-b-2 border-[#d7c8ed]">
+              <th class="px-4 py-4 text-left font-semibold table-header-text text-xs uppercase tracking-wider w-12">
+                <span class="flex items-center gap-1"><i class="fas fa-hashtag text-[#6f4c9e] text-xs"></i> #</span>
+              </th>
+              <th class="px-4 py-4 text-left font-semibold table-header-text text-xs uppercase tracking-wider min-w-[200px]">
+                <span class="flex items-center gap-2"><i class="fas fa-tag text-[#6f4c9e] text-xs"></i> Feature</span>
+              </th>
+              <th class="px-4 py-4 text-left font-semibold table-header-text text-xs uppercase tracking-wider min-w-[260px]">
+                <span class="flex items-center gap-2"><i class="fas fa-align-left text-[#6f4c9e] text-xs"></i> Description</span>
+              </th>
+              <th class="px-4 py-4 text-left font-semibold table-header-text text-xs uppercase tracking-wider w-28">
+                <span class="flex items-center gap-1"><i class="fas fa-layer-group text-[#6f4c9e] text-xs"></i> Phase</span>
+              </th>
+            </tr>
+          </thead>
+          <tbody class="divide-y divide-[#ece3f7]">
+            <!-- ============== PHASE 1 ============== -->
+            <tr class="bg-white/50">
+              <td colspan="4" class="px-4 py-3 font-semibold text-[#3f2a63] bg-[#f4edfc]">
+                <i class="fas fa-flag-checkered mr-2 text-[#6f4c9e]"></i> Phase 1 — Core
+              </td>
+            </tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">1</td><td class="px-4 py-3 font-medium">Smart Collection Browser</td><td class="px-4 py-3 text-[#3e2b58]">Browse sarees by category with filters, tags, and visually rich grid layout</td><td class="px-4 py-3"><span class="inline-block bg-[#e6daf7] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Core</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">2</td><td class="px-4 py-3 font-medium">Category Pages</td><td class="px-4 py-3 text-[#3e2b58]">Dedicated pages for each saree type (Silk, Cotton, Designer, etc.) with curated banners</td><td class="px-4 py-3"><span class="inline-block bg-[#e6daf7] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Core</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">3</td><td class="px-4 py-3 font-medium">New Arrivals Section</td><td class="px-4 py-3 text-[#3e2b58]">Highlight recently added sarees with a “New” badge to keep content fresh</td><td class="px-4 py-3"><span class="inline-block bg-[#e6daf7] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Core</span></td></tr>
+
+            <!-- ============== PHASE 2 ============== -->
+            <tr class="bg-white/50"><td colspan="4" class="px-4 py-3 font-semibold text-[#3f2a63] bg-[#f4edfc]"><i class="fas fa-image mr-2 text-[#6f4c9e]"></i> Phase 2 — Visual Impact</td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">4</td><td class="px-4 py-3 font-medium">360° Zoom Viewer</td><td class="px-4 py-3 text-[#3e2b58]">High-resolution drape viewer showing texture, border detail, and fabric fall</td><td class="px-4 py-3"><span class="inline-block bg-[#ddd0f0] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Visual</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">5</td><td class="px-4 py-3 font-medium">Lookbook Gallery</td><td class="px-4 py-3 text-[#3e2b58]">Editorial-style model photos showcasing sarees in real settings with aspirational storytelling</td><td class="px-4 py-3"><span class="inline-block bg-[#ddd0f0] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Visual</span></td></tr>
+
+            <!-- ============== PHASE 3 ============== -->
+            <tr class="bg-white/50"><td colspan="4" class="px-4 py-3 font-semibold text-[#3f2a63] bg-[#f4edfc]"><i class="fas fa-handshake mr-2 text-[#6f4c9e]"></i> Phase 3 — Engagement &amp; Trust</td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">6</td><td class="px-4 py-3 font-medium">Wishlist / Favorites</td><td class="px-4 py-3 text-[#3e2b58]">Heart icon to save sarees to a personal collection without login</td><td class="px-4 py-3"><span class="inline-block bg-[#d4c2ed] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Trust</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">7</td><td class="px-4 py-3 font-medium">Contact Enquiry Form</td><td class="px-4 py-3 text-[#3e2b58]">Direct inquiry form with name, email, message, and validation for lead generation</td><td class="px-4 py-3"><span class="inline-block bg-[#d4c2ed] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Trust</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">8</td><td class="px-4 py-3 font-medium">Heritage &amp; Craft Story</td><td class="px-4 py-3 text-[#3e2b58]">Detail page section explaining fabric origin, weave technique, and artisan background</td><td class="px-4 py-3"><span class="inline-block bg-[#d4c2ed] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Trust</span></td></tr>
+
+            <!-- ============== PHASE 4 ============== -->
+            <tr class="bg-white/50"><td colspan="4" class="px-4 py-3 font-semibold text-[#3f2a63] bg-[#f4edfc]"><i class="fas fa-bolt mr-2 text-[#6f4c9e]"></i> Phase 4 — Power Features</td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">9</td><td class="px-4 py-3 font-medium">Advanced Search</td><td class="px-4 py-3 text-[#3e2b58]">Search bar with autocomplete suggestions for saree names, fabrics, and occasions</td><td class="px-4 py-3"><span class="inline-block bg-[#cbb6e8] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Power</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">10</td><td class="px-4 py-3 font-medium">Saree Compare Tool</td><td class="px-4 py-3 text-[#3e2b58]">Side-by-side comparison of up to 3 sarees showing fabric, price range, and details</td><td class="px-4 py-3"><span class="inline-block bg-[#cbb6e8] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Power</span></td></tr>
+
+            <!-- ============== QUICK-WIN ADD-ONS ============== -->
+            <tr class="bg-white/50"><td colspan="4" class="px-4 py-3 font-semibold text-[#3f2a63] bg-[#f4edfc]"><i class="fas fa-star mr-2 text-[#6f4c9e]"></i> Quick-Win Add-ons (low effort, high polish)</td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">11</td><td class="px-4 py-3 font-medium">Dark/Light Mode Toggle</td><td class="px-4 py-3 text-[#3e2b58]">Theme switcher for comfortable browsing day or night</td><td class="px-4 py-3"><span class="inline-block bg-[#e3d2f5] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Add‑on</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">12</td><td class="px-4 py-3 font-medium">Lightbox Image Gallery</td><td class="px-4 py-3 text-[#3e2b58]">Click to expand saree images in full-screen with zoom and swipe navigation</td><td class="px-4 py-3"><span class="inline-block bg-[#e3d2f5] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Add‑on</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">13</td><td class="px-4 py-3 font-medium">Lazy Loading with Blur Placeholders</td><td class="px-4 py-3 text-[#3e2b58]">Images load smoothly with a blurred preview before full resolution appears</td><td class="px-4 py-3"><span class="inline-block bg-[#e3d2f5] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Add‑on</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">14</td><td class="px-4 py-3 font-medium">Page Transition Animations</td><td class="px-4 py-3 text-[#3e2b58]">Smooth fade/slide animations between pages using Framer Motion</td><td class="px-4 py-3"><span class="inline-block bg-[#e3d2f5] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Add‑on</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">15</td><td class="px-4 py-3 font-medium">Color Palette Filter</td><td class="px-4 py-3 text-[#3e2b58]">Filter sarees by dominant colors using a visual color-picker grid</td><td class="px-4 py-3"><span class="inline-block bg-[#e3d2f5] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Add‑on</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">16</td><td class="px-4 py-3 font-medium">Recently Viewed Items</td><td class="px-4 py-3 text-[#3e2b58]">Sidebar section showing last 5–8 sarees the user browsed</td><td class="px-4 py-3"><span class="inline-block bg-[#e3d2f5] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Add‑on</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">17</td><td class="px-4 py-3 font-medium">“You May Also Like”</td><td class="px-4 py-3 text-[#3e2b58]">AI-like matching suggestions based on currently viewed saree</td><td class="px-4 py-3"><span class="inline-block bg-[#e3d2f5] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Add‑on</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">18</td><td class="px-4 py-3 font-medium">WhatsApp Quick Enquiry Button</td><td class="px-4 py-3 text-[#3e2b58]">Floating WhatsApp button on each product page for instant inquiry</td><td class="px-4 py-3"><span class="inline-block bg-[#e3d2f5] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Add‑on</span></td></tr>
+
+            <!-- ============== BONUS IDEAS ============== -->
+            <tr class="bg-white/50"><td colspan="4" class="px-4 py-3 font-semibold text-[#3f2a63] bg-[#f4edfc]"><i class="fas fa-gem mr-2 text-[#6f4c9e]"></i> Bonus Ideas</td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">19</td><td class="px-4 py-3 font-medium">Saree of the Week Spotlight</td><td class="px-4 py-3 text-[#3e2b58]">Hero section featuring one highlighted saree weekly</td><td class="px-4 py-3"><span class="inline-block bg-[#dac8f0] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Bonus</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">20</td><td class="px-4 py-3 font-medium">Care Guide Section</td><td class="px-4 py-3 text-[#3e2b58]">Tips on washing, storing, and maintaining silk and delicate sarees</td><td class="px-4 py-3"><span class="inline-block bg-[#dac8f0] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Bonus</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">21</td><td class="px-4 py-3 font-medium">Instagram Feed Embed</td><td class="px-4 py-3 text-[#3e2b58]">Live Instagram gallery embedded on the homepage for social proof</td><td class="px-4 py-3"><span class="inline-block bg-[#dac8f0] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Bonus</span></td></tr>
+
+            <!-- ============== AUTH & SECURITY (phase 5) ============== -->
+            <tr class="bg-white/50"><td colspan="4" class="px-4 py-3 font-semibold text-[#3f2a63] bg-[#f4edfc]"><i class="fas fa-lock mr-2 text-[#6f4c9e]"></i> Phase 5 — Authentication &amp; Security</td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">22</td><td class="px-4 py-3 font-medium">JWT-Based Sign In / Sign Up</td><td class="px-4 py-3 text-[#3e2b58]">Secure token-based authentication using access and refresh tokens</td><td class="px-4 py-3"><span class="inline-block bg-[#c7b0e8] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Auth</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">23</td><td class="px-4 py-3 font-medium">Social Login (Google/Facebook)</td><td class="px-4 py-3 text-[#3e2b58]">One-click sign in using Google or Facebook OAuth to reduce friction</td><td class="px-4 py-3"><span class="inline-block bg-[#c7b0e8] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Auth</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">24</td><td class="px-4 py-3 font-medium">Email Verification on Sign Up</td><td class="px-4 py-3 text-[#3e2b58]">Send verification link via email to confirm account before granting access</td><td class="px-4 py-3"><span class="inline-block bg-[#c7b0e8] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Auth</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">25</td><td class="px-4 py-3 font-medium">Password Reset Flow</td><td class="px-4 py-3 text-[#3e2b58]">“Forgot Password” option with secure email link and token expiry</td><td class="px-4 py-3"><span class="inline-block bg-[#c7b0e8] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Auth</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">26</td><td class="px-4 py-3 font-medium">OTP-Based Mobile Login</td><td class="px-4 py-3 text-[#3e2b58]">Passwordless login via one-time password sent to mobile number</td><td class="px-4 py-3"><span class="inline-block bg-[#c7b0e8] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Auth</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">27</td><td class="px-4 py-3 font-medium">Rate Limiting on Auth Endpoints</td><td class="px-4 py-3 text-[#3e2b58]">Block brute-force attacks by limiting login attempts per IP/email</td><td class="px-4 py-3"><span class="inline-block bg-[#c7b0e8] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Auth</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">28</td><td class="px-4 py-3 font-medium">Role-Based Access Control (RBAC)</td><td class="px-4 py-3 text-[#3e2b58]">Define user roles (Admin, Customer, Guest) with different permissions</td><td class="px-4 py-3"><span class="inline-block bg-[#c7b0e8] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Auth</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">29</td><td class="px-4 py-3 font-medium">Protected Routes (Frontend)</td><td class="px-4 py-3 text-[#3e2b58]">React route guards that redirect unauthenticated users to login page</td><td class="px-4 py-3"><span class="inline-block bg-[#c7b0e8] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Auth</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">30</td><td class="px-4 py-3 font-medium">Session Persistence</td><td class="px-4 py-3 text-[#3e2b58]">Keep user logged in across browser refreshes using refresh tokens</td><td class="px-4 py-3"><span class="inline-block bg-[#c7b0e8] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Auth</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">31</td><td class="px-4 py-3 font-medium">Logout with Token Blacklisting</td><td class="px-4 py-3 text-[#3e2b58]">Invalidate tokens on logout so they cannot be reused</td><td class="px-4 py-3"><span class="inline-block bg-[#c7b0e8] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Auth</span></td></tr>
+
+            <!-- ============== USER PROFILE ============== -->
+            <tr class="bg-white/50"><td colspan="4" class="px-4 py-3 font-semibold text-[#3f2a63] bg-[#f4edfc]"><i class="fas fa-user-circle mr-2 text-[#6f4c9e]"></i> User Profile &amp; Account</td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">32</td><td class="px-4 py-3 font-medium">User Profile Page</td><td class="px-4 py-3 text-[#3e2b58]">Editable profile with name, email, phone, and avatar upload</td><td class="px-4 py-3"><span class="inline-block bg-[#d3beea] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Profile</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">33</td><td class="px-4 py-3 font-medium">Change Password</td><td class="px-4 py-3 text-[#3e2b58]">Allow logged-in users to securely update their password</td><td class="px-4 py-3"><span class="inline-block bg-[#d3beea] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Profile</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">34</td><td class="px-4 py-3 font-medium">Saved Favorites Sync Across Devices</td><td class="px-4 py-3 text-[#3e2b58]">Wishlist synced to backend so favorites persist across phone and desktop</td><td class="px-4 py-3"><span class="inline-block bg-[#d3beea] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Profile</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">35</td><td class="px-4 py-3 font-medium">Account Deletion Option</td><td class="px-4 py-3 text-[#3e2b58]">GDPR-compliant self-serve account deletion from settings</td><td class="px-4 py-3"><span class="inline-block bg-[#d3beea] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Profile</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">36</td><td class="px-4 py-3 font-medium">Email Notification Preferences</td><td class="px-4 py-3 text-[#3e2b58]">Toggle which emails user wants (new arrivals, offers, etc.)</td><td class="px-4 py-3"><span class="inline-block bg-[#d3beea] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Profile</span></td></tr>
+
+            <!-- ============== SECURITY BEST PRACTICES ============== -->
+            <tr class="bg-white/50"><td colspan="4" class="px-4 py-3 font-semibold text-[#3f2a63] bg-[#f4edfc]"><i class="fas fa-shield-alt mr-2 text-[#6f4c9e]"></i> Security Best Practices (Backend)</td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">37</td><td class="px-4 py-3 font-medium">HTTPS Enforcement</td><td class="px-4 py-3 text-[#3e2b58]">Force all traffic over SSL/TLS for encrypted data transfer</td><td class="px-4 py-3"><span class="inline-block bg-[#cbb6e8] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Security</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">38</td><td class="px-4 py-3 font-medium">CORS Whitelisting</td><td class="px-4 py-3 text-[#3e2b58]">Restrict API access to only your frontend domain</td><td class="px-4 py-3"><span class="inline-block bg-[#cbb6e8] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Security</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">39</td><td class="px-4 py-3 font-medium">Input Sanitization</td><td class="px-4 py-3 text-[#3e2b58]">Prevent XSS and SQL injection by sanitizing all user inputs</td><td class="px-4 py-3"><span class="inline-block bg-[#cbb6e8] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Security</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">40</td><td class="px-4 py-3 font-medium">Secure HTTP-Only Cookies</td><td class="px-4 py-3 text-[#3e2b58]">Store refresh tokens in HTTP-only, secure, same-site cookies</td><td class="px-4 py-3"><span class="inline-block bg-[#cbb6e8] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Security</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">41</td><td class="px-4 py-3 font-medium">Django SECRET_KEY &amp; .env Management</td><td class="px-4 py-3 text-[#3e2b58]">Keep secrets in environment variables, never hard-coded</td><td class="px-4 py-3"><span class="inline-block bg-[#cbb6e8] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Security</span></td></tr>
+            <tr><td class="px-4 py-3 text-center text-[#4d3672]">42</td><td class="px-4 py-3 font-medium">API Throttling</td><td class="px-4 py-3 text-[#3e2b58]">Limit API request frequency per user to prevent abuse</td><td class="px-4 py-3"><span class="inline-block bg-[#cbb6e8] text-[#3d2960] text-xs font-semibold px-3 py-1 rounded-full">Security</span></td></tr>
+          </tbody>
+        </table>
+      </div>
+      <!-- subtle footer note -->
+      <div class="bg-[#f7f2fd] px-6 py-3 border-t border-[#e5d9f2] flex flex-wrap items-center justify-between text-xs text-[#4b3570]">
+        <span><i class="fas fa-code mr-1"></i> 42 features · ready for React / Django</span>
+        <span class="flex items-center gap-4">
+          <span><i class="far fa-circle-check text-[#6f4c9e] mr-1"></i> phase 1–5 + security</span>
+          <span><i class="fas fa-mobile-alt mr-1"></i> responsive</span>
+        </span>
+      </div>
+    </div>
+
+    <!-- tiny extra: quick reference chips -->
+    <div class="mt-6 flex flex-wrap items-center gap-3 justify-center md:justify-start">
+      <span class="inline-block bg-white/60 border border-[#ddd0eb] rounded-full px-4 py-1.5 text-xs font-medium text-[#3f2a63] shadow-sm"><i class="fas fa-circle text-[#6f4c9e] mr-1.5 text-[10px]"></i>Core · 3</span>
+      <span class="inline-block bg-white/60 border border-[#ddd0eb] rounded-full px-4 py-1.5 text-xs font-medium text-[#3f2a63] shadow-sm"><i class="fas fa-circle text-[#8b6ec2] mr-1.5 text-[10px]"></i>Visual · 2</span>
+      <span class="inline-block bg-white/60 border border-[#ddd0eb] rounded-full px-4 py-1.5 text-xs font-medium text-[#3f2a63] shadow-sm"><i class="fas fa-circle text-[#9f7fd1] mr-1.5 text-[10px]"></i>Trust · 3</span>
+      <span class="inline-block bg-white/60 border border-[#ddd0eb] rounded-full px-4 py-1.5 text-xs font-medium text-[#3f2a63] shadow-sm"><i class="fas fa-circle text-[#b195db] mr-1.5 text-[10px]"></i>Power · 2</span>
+      <span class="inline-block bg-white/60 border border-[#ddd0eb] rounded-full px-4 py-1.5 text-xs font-medium text-[#3f2a63] shadow-sm"><i class="fas fa-circle text-[#c1a7e3] mr-1.5 text-[10px]"></i>Add‑on · 8</span>
+      <span class="inline-block bg-white/60 border border-[#ddd0eb] rounded-full px-4 py-1.5 text-xs font-medium text-[#3f2a63] shadow-sm"><i class="fas fa-circle text-[#d1b9ea] mr-1.5 text-[10px]"></i>Bonus · 3</span>
+      <span class="inline-block bg-white/60 border border-[#ddd0eb] rounded-full px-4 py-1.5 text-xs font-medium text-[#3f2a63] shadow-sm"><i class="fas fa-circle text-[#a884d6] mr-1.5 text-[10px]"></i>Auth · 10</span>
+      <span class="inline-block bg-white/60 border border-[#ddd0eb] rounded-full px-4 py-1.5 text-xs font-medium text-[#3f2a63] shadow-sm"><i class="fas fa-circle text-[#b397da] mr-1.5 text-[10px]"></i>Profile · 5</span>
+      <span class="inline-block bg-white/60 border border-[#ddd0eb] rounded-full px-4 py-1.5 text-xs font-medium text-[#3f2a63] shadow-sm"><i class="fas fa-circle text-[#c2abdf] mr-1.5 text-[10px]"></i>Security · 6</span>
+    </div>
+
+    <!-- small footer -->
+    <div class="mt-6 text-center text-xs text-[#5e4a7c] opacity-70 border-t border-[#e6dcf5] pt-5">
+      <i class="fas fa-sari text-[#a884d6] mr-1"></i> Saree Portfolio · complete feature roadmap 
+      <span class="mx-2 hidden sm:inline">·</span> 
+      <span class="block sm:inline">built with Tailwind · clean &amp; ready for dev</span>
+    </div>
+  </div>
+</body>
+</html>
