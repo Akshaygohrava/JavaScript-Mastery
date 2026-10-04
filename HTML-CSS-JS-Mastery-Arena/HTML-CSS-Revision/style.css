@@ -1,0 +1,137 @@
+/* * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+} */
+
+h1 {
+    text-align: center;
+    color: red;
+}
+
+#menubar {
+    background-color: green;
+    padding: 1px;
+}
+
+ul li {
+    list-style-type: none;
+    display: inline;
+    margin: 20px;
+    font-size: 1.4rem;
+    color: white;
+    padding: 5px;
+    margin: 10px;
+    transition: .5s;
+}
+ul li:hover {
+    background: white;
+    color: green;
+}
+
+/* css comments here ....... */
+
+
+article {
+    background-color: yellowgreen;
+    padding: 20px;
+    margin-top: 20px;
+}
+article h3 {
+    text-align: center;
+    font-family: cursive;
+    font-size: 1.4rem;
+}
+
+article p {
+    color: aliceblue;
+    font-size: 5vw;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* animation testing */
+
+.animate {
+    height: 100px;
+    width: 100px;
+    background-color: red;
+    animation-name: rotate;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+}
+
+@keyframes rotate {
+    0% {
+         transform: rotateX(0deg);
+    }
+    100% {
+           transform: rotate(360deg);
+    }
+}
+
+.test {
+    height: 100px;
+    width: 100px;
+    background-color: green;
+    border-radius: 50%;
+    display: block;
+    margin: 0 auto;
+    /* transform: translate(-50%,-50%); */
+}
+
+
+#flex {
+    height: 500px;
+    width: 100%;
+    background-color: yellow;
+    padding: 10px;
+    display: flex;
+    flex-direction: row-reverse;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.item {
+    height: 50px;
+    width: 50px;
+    background-color: white;
+    margin: 10px;
+}
+
+#grid {
+    height: 500px;
+    width: 100%;
+    background-color: green;
+    padding: 10px;
+}
+
+#grid .items {
+    height: 50px;
+    width: 50px;
+    background-color: black;
+    margin: 10px;
+    display: grid;
+}
+
+
+
+@media screen and (max-width:400px) {
+    body {
+        background-color: red;
+    }
+}
+
+
+@media screen and (min-width:700px) and (max-width:1200px) {
+    body {
+        background-color: yellow;
+    }
+}
+
+@media (min-width:500px) {
+    body {
+        background-color: green;
+    }
+}
