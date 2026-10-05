@@ -5,6 +5,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HTML & CSS Revision</title>
     <link rel="stylesheet" href="style.css">
+    <style>
+        footer h3 {
+          color: white;
+          text-align: center;
+        }
+    </style>
 </head>
 <body>
 
@@ -36,19 +42,27 @@
    </article>
 
    <div class="contact-form">
-    <h2>Contact Form</h2>
+    <h2 style="text-align: center;font-family: cursive;">Contact Form</h2>
 
     <form action="">
-      <label for="username">Username: </label>
+      <label for="username">Username: </label><br>
     <input type="text" name="" id=""><br><br>
 
-    <label for="password">Password: </label>
+    <label for="password">Password: </label><br>
     <input type="password" name="" id=""><br><br>
 
-    <label for="email">Email: </label>
+    <label for="email">Email: </label><br>
     <input type="email" name="" id=""><br><br>
 
-    <input type="submit" value="Submit">&nbsp;&nbsp;
+    <label for="number">Number</label><br>
+    <select name="" id="">
+        <option value="">india +91</option>
+        <option value="">usa +1</option>
+    </select>
+
+    <input type="number" name="" id=""><br><br><br>
+
+    <input class="submit" type="submit" value="Submit">&nbsp;&nbsp;
     <button type="reset">Reset</button>
     </form>
     
@@ -86,6 +100,7 @@
 
    </div>
     <br><br>
+     <h2 style="text-align: center;">Flex Property</h2>
    <div id="flex">
     <div class="item"></div>
     <div class="item"></div>
@@ -97,19 +112,31 @@
     <div class="item"></div>
    </div><br><br>
 
+   <h2 style="text-align: center;">Grid Property</h2>
    <div id="grid">
-    <div class="items"></div>
-    <div class="items"></div>
-    <div class="items"></div>
-    <div class="items"></div>
-    
+    <div class="items header">Header</div>
+    <div class="items article">Article</div>
+    <div class="items section">Section</div>
+    <div class="items service">Service</div>
+    <div class="items contact">Contact</div>
+    <div class="items footer">Footer</div>
+   </div><br><br>
+
+   <div class="picture">
+    <img src="https://randomimageurl.com/assets/images/local/20260103_0519_Random%20Natural%20Landscape_simple_compose_01ke205qagfmws7n99rgjhthbn_compressed_q80.jpeg" height="250px" width="100%" />
+<br><br>
+
+    <video src="https://lorem.video/720p_h264_10s" height="250px" width="100%" controls></video>
    </div>
 
+        
+<footer style="width: 100%;background-color: black;padding: 10px;">
+    <h3>All right reserved 2026 @akshaygohrava</h3>
 
+   <h6 style="text-align: center;color: white;">september 2026</h6>
+</footer>
 
-
-
-   <h6>september 2026</h6>
+  
     
 </body>
 </html>
