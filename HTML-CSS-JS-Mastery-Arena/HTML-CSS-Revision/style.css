@@ -5,6 +5,7 @@
     scroll-behavior: smooth;
 } */
 
+
 h1 {
     text-align: center;
     color: red;
@@ -65,6 +66,7 @@ form {
 form label {
     font-size: 1.2rem;
     margin-bottom: 10px;
+    text-align: center;
 }
 form input {
     padding: 5px 10px;
@@ -80,14 +82,14 @@ select {
     background-color: transparent;
 }
 select
-.submit {
+button[type="submit"] {
     font-size: 1.2rem;
     background-color: red;
     color: white;
     padding: 10px;
     border-radius: 10px;
 }
-button[type="reset"] {
+button {
     font-size: 1.2rem;
     background-color: red;
     color: white;
@@ -195,9 +197,25 @@ button[type="reset"] {
 }
 
 
-@media screen and (max-width:400px) {
-    body {
+@media screen and (max-width:500px) {
+    /* body {
         background-color: red;
+    } */
+     #menubar {
+        height: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        overflow: hidden;
+        transition: .7s;
+     }
+     ul li {
+        display: block;
+        text-align: center;
+        
+    }
+    .dropdown:hover + #menubar {
+        height: 300px;
     }
 }
 
@@ -209,9 +227,9 @@ button[type="reset"] {
 }
 
 @media (min-width:500px) {
-    body {
+    /* body {
         background-color: green;
-    }
+    } */
     .test {
         background-color: red;
     }
