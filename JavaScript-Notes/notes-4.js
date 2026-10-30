@@ -45,12 +45,41 @@ document.writeln("hello , i m learning java script !");
 
 
 
+// typeof
+document.writeln(typeof "x");       // "string"
+document.writeln(typeof null);      // "object" (historic bug)
+document.writeln(typeof []);        // "object"
+document.writeln(typeof undefined); // "undefined"
+
+// instanceof
+document.writeln([] instanceof Array);  // true
+document.writeln(new Date() instanceof Date); // true
 
 
 
 
+// Bubbling
+parent.addEventListener("click", () => console.log("parent"));
+child.addEventListener("click", () => console.log("child"));
+// click on child → "child" then "parent"
 
+// Capturing
+parent.addEventListener("click", () => console.log("capture"), true);
+// → "capture" fires before target
 
+// preventDefault + stopPropagation
+form.addEventListener("submit", (e) => {
+  e.preventDefault();     // don't reload page
+  e.stopPropagation();    // don't bubble
+  submitViaFetch();
+});
+
+// Delegation — one listener for all <li>s
+ul.addEventListener("click", (e) => {
+  const li = e.target.closest("li");
+  if (!li) return;
+  console.log("clicked item id:", li.dataset.id);
+});
 
 
 
