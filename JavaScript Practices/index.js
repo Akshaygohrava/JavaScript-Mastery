@@ -17,4 +17,18 @@ let students = {
 const frutis = ["mangos", "apples", "oranges"];
 
 var marks = 12345;
+
+
+async function test() {
+    let url = await fetch("https://fakestoreapi.com/products");
+    let data = await url.json();
+
+    document.writeln(
+        data.map(item => {
+            document.writeln(`${item.id, item.title}`)
+        })
+    );
+}
+
+test();
  

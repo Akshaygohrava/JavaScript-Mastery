@@ -1,7 +1,7 @@
 
 // JavaScript Notes For Revision 
 // From Basic to Advance - Octomber 2026
-
+document.writeln("<br><br><h2>Notes 1</h2><br><br>");
 
 // Basic Of JavaScript 
 
@@ -101,6 +101,20 @@ for(const i in obj) {
     document.writeln(obj[i]);
 }
 
+// Nested Loops in JS 
+
+for(let i = 1; i <= 5;i++) {
+    for(let j = 1;j <= i; j++) {
+        document.write("*");
+    }
+    document.writeln("<br>")
+}
+
+// Switches in JS
+
+
+
+
 
 document.writeln("<br><br> Functions In JS !");
 // Types Of functions In JavaScript
@@ -158,6 +172,20 @@ const MyPromise = new Promise((resolve, reject,fulfiled) => {
 .catch((error) => document.writeln(error))
 .finally(() => document.writeln("this is finaly block !"))
 
+const MyPromises = new Promise((resolve, reject) => {
+    let success = true;
+
+    if (success) {
+        resolve(document.writeln("this is second resolve"));
+    } else {
+        reject(document.writeln("this is second reject ....."))
+    }
+
+})
+.then(() => document.writeln("Success Second !"))
+.catch(document.writeln("this is catch block "))
+.finally(document.writeln("this is cleanup function !"))
+
 
 
 document.writeln("<br><br> APi Fetching In JS ! <br><br>");
@@ -186,7 +214,18 @@ async function fetching() {
 }
 // fetching();
 
+async function test() {
+    let url = await fetch("https://fakestoreapi.com/products");
+    let data = await url.json();
 
+    document.writeln(
+        data.map(item => {
+            document.writeln(`${item.id, item.title}`)
+        })
+    );
+}
+
+test();
 
 
 

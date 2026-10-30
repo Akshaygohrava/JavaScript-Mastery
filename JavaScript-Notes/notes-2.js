@@ -1,6 +1,8 @@
-"use strict";
 
-document.writeln("<br>");
+
+document.writeln("<br><br><h2>Notes 2</h2><br><br>");
+
+
 // Every thing About String and Arrays and Objects in JavaScript 
 
 
