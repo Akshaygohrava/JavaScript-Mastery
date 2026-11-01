@@ -23,7 +23,7 @@ document.write(a);
 // let a = 123321;  this gives an errror
 
 
-// var can be redeclare and reassigned !  - Function Scope
+// var can be redeclare and reassigned !  - Global - Function Scope
 var b = "akshay";
 var b = "gohrava";
 document.write(b);
@@ -213,6 +213,8 @@ async function fetching() {
     }
 }
 // fetching();
+
+
 
 async function test() {
     let url = await fetch("https://fakestoreapi.com/products");

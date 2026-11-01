@@ -19,18 +19,28 @@ const frutis = ["mangos", "apples", "oranges"];
 var marks = 12345;
 
 
-// async function test() {
-//     let url = await fetch("https://fakestoreapi.com/products");
-//     let data = await url.json();
+async function safe() {
 
-//     document.writeln(
-//         data.map(item => {
-//             document.writeln(`${item.id, item.title}`)
-//         })
-//     );
-// }
+setTimeout(async () => {
+try {
+    const res = await fetch("https://fakestoreapi.com/products");
+    const data = await res.json();
+    data.map(item => {
+            document.writeln(`${item.title}, ${item.price}`);
+        })
+} catch (error) {
+    document.writeln(error);
+}
+finally {
+    document.writeln("cleanup functions")
+}
+}, 5000)
 
-// test();
+}
+safe();
+
+
+
 
 
 function test() {

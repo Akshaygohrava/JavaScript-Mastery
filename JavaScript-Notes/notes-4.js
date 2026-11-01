@@ -57,6 +57,7 @@ document.writeln(new Date() instanceof Date); // true
 
 
 
+// Events Phases In JS 
 
 // Bubbling
 parent.addEventListener("click", () => console.log("parent"));
