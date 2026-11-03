@@ -110,6 +110,17 @@ for(let i = 1; i <= 5;i++) {
     document.writeln("<br>")
 }
 
+// Map -built-in method in javascript - give 3 parameter , element,index
+// returns new array 
+
+let fruits = ["mango", "apple", "banana", "oranges"];
+
+fruits.map((element, index) => {
+    document.writeln(element,index);
+})
+
+
+
 // Switches in JS
 
 
